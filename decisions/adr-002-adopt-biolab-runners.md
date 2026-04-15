@@ -54,12 +54,12 @@ All Lambda Biolab consumer projects adopt `biolab-runners` as their local execut
 
 Per consumer project, in order:
 
-1. **Add dependency.** `pyproject.toml` gets `biolab-runners>=X.Y`.
+1. **Add dependency.** `uv add 'biolab-runners>=X.Y'` (with the `[boltz2]` extra if the project runs Boltz-2). All Lambda Biolab projects use `uv` as the package manager; `uv pip` is a compatibility shim for pip-migration flows and is not used in greenfield workflows.
 2. **Adapter layer.** Create a `consumer/local_runners.py` that constructs `biolab_runners` configs from the project's domain objects (targets, peptides, thresholds).
 3. **Smoke test before deletion.** Run a single prediction and a single MD job through the new adapter on a known-good candidate; diff the outputs against the archived result.
 4. **Delete duplicated code.** Remove the consumer's `prediction/boltz2_runner.py` and `md/openmm_runner.py`. Update all imports.
 5. **Verify tests.** Full suite must pass. Any test that used internal symbols of the old runner files must move to `biolab-runners` or be rewritten to target the adapter.
-6. **Pin version.** After adoption, pin the `biolab-runners` version to prevent silent upgrades.
+6. **Pin version.** After adoption, pin the `biolab-runners` version in `pyproject.toml` to prevent silent upgrades (`uv lock` captures the exact resolution in `uv.lock`).
 
 OralBiome-AMP is the first adopter (largest duplication surface, biolab-runners was extracted from it). UTI-project follows once the OralBiome-AMP migration has shipped and been exercised in a real batch.
 
