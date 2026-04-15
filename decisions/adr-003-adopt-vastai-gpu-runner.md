@@ -16,7 +16,7 @@ Cloud GPU batch orchestration (deploy N Vast.ai instances, shard work across the
 - Sibling-file rule (`AGENTS.md`) exists specifically because fixes to one orchestrator routinely miss the other
 - UTI-project needs cloud orchestration too, currently implemented as bash scripts that duplicate a subset of the Python logic
 
-The `vastai-gpu-runner` package ([github.com/antomicblitz/vastai-gpu-runner](https://github.com/antomicblitz/vastai-gpu-runner)) was extracted from OralBiome-AMP to address this. It provides:
+The `vastai-gpu-runner` package ([github.com/Lambda-Biolab/vastai-gpu-runner](https://github.com/Lambda-Biolab/vastai-gpu-runner)) was extracted from OralBiome-AMP to address this. It provides:
 
 - `BaseWorker` — template-method worker pattern (R2 connectivity gate, R2 upload, self-destruct via Vast.ai REST API, PID file, completion markers)
 - `BatchOrchestrator` — deploy/poll/cleanup lifecycle with shard recovery, checkpoint resume, instance destroy-and-replace

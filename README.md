@@ -45,7 +45,7 @@ Cross-project code lives in dedicated pip-installable packages, not in this repo
 | Package | Repo | Purpose | Governed by |
 |---------|------|---------|-------------|
 | `biolab-runners` | [Lambda-Biolab/biolab-runners](https://github.com/Lambda-Biolab/biolab-runners) | Local Boltz-2 + OpenMM execution | [ADR-002](decisions/adr-002-adopt-biolab-runners.md) |
-| `vastai-gpu-runner` | [antomicblitz/vastai-gpu-runner](https://github.com/antomicblitz/vastai-gpu-runner) | Vast.ai cloud orchestration (`BaseWorker`, `BatchOrchestrator`) | [ADR-003](decisions/adr-003-adopt-vastai-gpu-runner.md) |
+| `vastai-gpu-runner` | [Lambda-Biolab/vastai-gpu-runner](https://github.com/Lambda-Biolab/vastai-gpu-runner) | Vast.ai cloud orchestration (`BaseWorker`, `BatchOrchestrator`) | [ADR-003](decisions/adr-003-adopt-vastai-gpu-runner.md) |
 
 ## Standards
 
