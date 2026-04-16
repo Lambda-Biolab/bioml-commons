@@ -28,7 +28,8 @@ bioml-commons/
     ├── adr-001-shared-repo.md
     ├── adr-002-adopt-biolab-runners.md
     ├── adr-003-adopt-vastai-gpu-runner.md
-    └── adr-004-complexity-gate-policy.md
+    ├── adr-004-complexity-gate-policy.md
+    └── adr-005-adopt-bioml-tools.md
 ```
 
 ## Consumer projects
@@ -46,6 +47,7 @@ Cross-project code lives in dedicated pip-installable packages, not in this repo
 |---------|------|---------|-------------|
 | `biolab-runners` | [Lambda-Biolab/biolab-runners](https://github.com/Lambda-Biolab/biolab-runners) | Local Boltz-2 + OpenMM execution | [ADR-002](decisions/adr-002-adopt-biolab-runners.md) |
 | `vastai-gpu-runner` | [Lambda-Biolab/vastai-gpu-runner](https://github.com/Lambda-Biolab/vastai-gpu-runner) | Vast.ai cloud orchestration (`BaseWorker`, `BatchOrchestrator`) | [ADR-003](decisions/adr-003-adopt-vastai-gpu-runner.md) |
+| `bioml-tools` | [Lambda-Biolab/bioml-tools](https://github.com/Lambda-Biolab/bioml-tools) | Shared computational toolkit (peptide, structure, docking, selectivity, MD) | [ADR-005](decisions/adr-005-adopt-bioml-tools.md) |
 
 ## Standards
 
