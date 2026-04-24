@@ -1,5 +1,7 @@
 # bioml-commons
 
+![bioml-commons — Shared tooling for computational drug discovery.](.github/social-preview.png)
+
 [![CodeFactor](https://www.codefactor.io/repository/github/lambda-biolab/bioml-commons/badge)](https://www.codefactor.io/repository/github/lambda-biolab/bioml-commons)
 [![CodeQL](https://github.com/Lambda-Biolab/bioml-commons/actions/workflows/codeql.yml/badge.svg)](https://github.com/Lambda-Biolab/bioml-commons/actions/workflows/codeql.yml)
 [![Dependabot](https://img.shields.io/badge/dependabot-enabled-blue?logo=dependabot)](https://github.com/Lambda-Biolab/bioml-commons/network/updates)
