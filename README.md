@@ -35,9 +35,7 @@ bioml-commons/
     ├── adr-002-adopt-biolab-runners.md
     ├── adr-003-adopt-vastai-gpu-runner.md
     ├── adr-004-complexity-gate-policy.md
-    ├── adr-005-adopt-bioml-tools.md
-    ├── adr-006-public-private-asset-policy.md
-    └── adr-007-shared-gha-governance.md
+    └── adr-005-adopt-bioml-tools.md
 ```
 
 ## Consumer projects
@@ -56,13 +54,9 @@ Cross-project code lives in dedicated pip-installable packages, not in this repo
 | `biolab-runners` | [Lambda-Biolab/biolab-runners](https://github.com/Lambda-Biolab/biolab-runners) | Local Boltz-2 + OpenMM execution | [ADR-002](decisions/adr-002-adopt-biolab-runners.md) |
 | `vastai-gpu-runner` | [Lambda-Biolab/vastai-gpu-runner](https://github.com/Lambda-Biolab/vastai-gpu-runner) | Vast.ai cloud orchestration (`BaseWorker`, `BatchOrchestrator`) | [ADR-003](decisions/adr-003-adopt-vastai-gpu-runner.md) |
 | `bioml-tools` | [Lambda-Biolab/bioml-tools](https://github.com/Lambda-Biolab/bioml-tools) | Shared computational toolkit (peptide, structure, docking, selectivity, MD) | [ADR-005](decisions/adr-005-adopt-bioml-tools.md) |
-| `bioml-private-retrieval` 🔒 | `Lambda-Biolab/bioml-private-retrieval` (private) | Retrieval modules with redistribution constraints — optional import for research agents | [ADR-006](decisions/adr-006-public-private-asset-policy.md) |
-| `bioml-private-evaldata` 🔒 | `Lambda-Biolab/bioml-private-evaldata` (private) | Curated holdouts + ground-truth labels — optional data for research agents | [ADR-006](decisions/adr-006-public-private-asset-policy.md) |
 
 ## Standards
 
 Cross-project engineering standards enforced by tooling:
 
 - **Complexity gate:** cognitive complexity ≤15 via `complexipy` in pre-commit, ratchet-widened per project — see [ADR-004](decisions/adr-004-complexity-gate-policy.md)
-- **Public vs private asset policy:** three-tier classification (private / public-with-signal / public-infra), `bioml-private-*` naming for closed repos, CI safety net + graceful-degradation pattern for consumers — see [ADR-006](decisions/adr-006-public-private-asset-policy.md)
-- **Shared GHA workflow governance:** tag-pin every `Lambda-Biolab/gha-*` consumer reference, per-consumer bump script, no `@main` — see [ADR-007](decisions/adr-007-shared-gha-governance.md)
